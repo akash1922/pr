@@ -1,0 +1,110 @@
+/* .toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #333;
+    color: rgb(255, 255, 255);
+    padding: 1rem 1.5rem;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 250px;
+    z-index: 9999;
+    animation: fadein 0.3s, fadeout 0.3s 4.7s;
+  }
+  
+  .close-btn {
+    background: transparent;
+    color: white;
+    border: none;
+    font-size: 1.2rem;
+    margin-left: 1rem;
+    cursor: pointer;
+  }
+  
+  @keyframes fadein {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes fadeout {
+    from { opacity: 1; transform: translateY(0); }
+    to { opacity: 0; transform: translateY(20px); }
+  }
+   */
+
+   .toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #333;
+    color: rgb(255, 255, 255);
+    padding: 1rem 1.5rem;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 250px;
+    z-index: 9999;
+    animation: fadein 0.3s, fadeout 0.3s 4.7s, borderDraw 1.5s ease-in-out forwards; /* Added borderDraw animation */
+    
+    /* Border color */
+    border: 2px solid transparent; /* Initially, set border to transparent */
+  }
+  
+  @keyframes fadein {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes fadeout {
+    from { opacity: 1; transform: translateY(0); }
+    to { opacity: 0; transform: translateY(20px); }
+  }
+  
+  /* Keyframes for the border drawing effect */
+  @keyframes borderDraw {
+    0% {
+      border-top: 2px solid transparent;
+      border-right: 2px solid transparent;
+      border-bottom: 2px solid transparent;
+      border-left: 2px solid transparent;
+    }
+    25% {
+      border-top: 2px solid #00ff00; 
+      border-right: 2px solid transparent;
+      border-bottom: 2px solid transparent;
+      border-left: 2px solid transparent;
+    }
+     50% {
+      border-top: 2px solid #00ff00;
+      border-right: 2px solid #00ff00;
+      border-bottom: 2px solid transparent;
+      border-left: 2px solid transparent;
+    }
+    75% {
+      border-top: 2px solid #00ff00;
+      border-right: 2px solid #00ff00;
+      border-bottom: 2px solid #00ff00; 
+      border-left: 2px solid transparent;
+    }
+    100% {
+      border-top: 2px solid #00ff00;
+      border-right: 2px solid #00ff00;
+      border-bottom: 2px solid #00ff00;
+      border-left: 2px solid #00ff00; 
+    } 
+  }
+  
+  .close-btn {
+    background: transparent;
+    color: white;
+    border: none;
+    font-size: 1.2rem;
+    margin-left: 1rem;
+    cursor: pointer;
+  }
+  
