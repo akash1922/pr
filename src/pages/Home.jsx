@@ -1,5 +1,5 @@
 import 'react-toastify/dist/ReactToastify.css';
-import MovieCard from '../components/Moviecard';
+import MovieCard from '../components/MovieCard';
 import { useState, useEffect } from 'react';
 import "../css/Home.css";
 import { searchMovies, getPopularMovies, getUpcomingMovies } from "../services/api";
